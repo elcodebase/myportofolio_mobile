@@ -5,7 +5,7 @@ class MyHomePage extends StatelessWidget {
 
   final String npm = "2506611156";
   final String nama = "Jehezkiel Jefferson I Latupeirissa";
-  final String kelas = "PBP A";
+  final String kelas = "PBP F";
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -17,9 +17,9 @@ class MyHomePage extends StatelessWidget {
   // always marked "final".
 
   final List<ItemHomepage> items = [
-    ItemHomepage("Lihat Proyek", Icons.folder),
-    ItemHomepage("Tambah Proyek", Icons.add_circle),
-    ItemHomepage("Keluar", Icons.logout),
+    ItemHomepage("Lihat Proyek", Icons.folder, Colors.blue),
+    ItemHomepage("Lihat Sertifikat", Icons.add_circle, Colors.red),
+    ItemHomepage("Lihat Pengalaman", Icons.logout, Colors.blueGrey),
   ];
 
   @override
@@ -112,8 +112,9 @@ class InfoCard extends StatelessWidget {
 class ItemHomepage {
   final String name;
   final IconData icon;
+  final Color color;
 
-  ItemHomepage(this.name, this.icon);
+  ItemHomepage(this.name, this.icon, this.color);
 }
 
 class ItemCard extends StatelessWidget {
@@ -122,7 +123,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Theme.of(context).colorScheme.secondary,
+      color: item.color,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         onTap: () {
