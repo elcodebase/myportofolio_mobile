@@ -1,21 +1,15 @@
 # myportofolio_mobile
 
-A new Flutter project.
+Aplikasi mobile portofolio pribadi berbasis Flutter (Pemrograman Berbasis Platform).
+Halaman utama menampilkan identitas pemilik (NPM, Nama, Kelas) dan menu aksi
+(Lihat Proyek, Tambah Proyek, Logout) yang menampilkan SnackBar saat ditekan.
 
-## Getting Started
+## Setup
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+1. Pasang [Flutter SDK](https://docs.flutter.dev/get-started/install).
+2. Clone repositori ini, lalu jalankan `flutter pub get`.
+3. Jalankan aplikasi dengan `flutter run`.
+4. Cek kualitas kode dengan `flutter analyze`.
 
 ### Tugas 7
 
@@ -56,7 +50,7 @@ dd. Colors merupakan widget yang bisa digunakan untuk mengatur warna widget dari
 
 5. BuildContext merupakan Sebuah pegangan ke lokasi widget dalam pohon widget. Kelas ini menyajikan serangkaian metode yang dapat digunakan dari metode StatelessWidget. Setiap widget memiliki BuildContext-nya sendiri, yang menjadi induk dari widget yang dikembalikan oleh fungsi StatelessWidget.build atau State.build. Secara khusus, ini berarti bahwa di dalam metode build, konteks build dari widget yang memiliki metode build tidak sama dengan konteks build dari widget yang dikembalikan oleh metode build.
 
-7. Hot reload mereload perubahan kode ke VM & membangun ulang widget tree sambil menyimpan state. Hot restart mereload perubahan kode ke VM & membangun ulang widget tree tidak menyimpan state. Kita tidak bisa mengandalkan hot reload ketika kita 
+6. Hot reload mereload perubahan kode ke VM & membangun ulang widget tree sambil menyimpan state. Hot restart mereload perubahan kode ke VM & membangun ulang widget tree tidak menyimpan state. Kita tidak bisa mengandalkan hot reload ketika kita 
 ingin mereset state dari sistem kita karena hot reload tetap menyimpan state sebelumnya. Oleh karena itu, Hot restart & Full restart harus digunakan
 
 ### AI Disclosure
