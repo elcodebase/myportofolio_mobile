@@ -19,7 +19,7 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
 
   final List<String> _categories = [
     'Web Development',
-    'Movile Development',
+    'Mobile Development',
     'Machine Learning',
     'Data Science',
     'Other',
@@ -168,11 +168,11 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Nama Proyek: %_projectName'),
-                                    Text('Deskripsi: %_description'),
-                                    Text('Kategori: %_category'),
-                                    Text('Teknologi: %_technologies'),
-                                    Text('Tautan: %_projectLink'),
+                                    Text('Nama Proyek: $_projectName'),
+                                    Text('Deskripsi: $_description'),
+                                    Text('Kategori: $_category'),
+                                    Text('Teknologi: $_technologies'),
+                                    Text('Tautan: $_projectLink'),
                                   ],
                                 ),
                               ),
