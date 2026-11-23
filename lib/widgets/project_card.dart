@@ -43,10 +43,15 @@ class ItemCard extends StatelessWidget {
               children: [
                 Icon(item.icon, color: Colors.white, size: 30.0),
                 const Padding(padding: EdgeInsets.all(3)),
-                Text(
-                  item.name,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white),
+                // Flexible + maxLines mencegah overflow pada sel grid sempit.
+                Flexible(
+                  child: Text(
+                    item.name,
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myportofolio_mobile/widgets/left_drawer.dart';
 
-//sampai sebelum 8. buatlah tombol sebagai child selanjutnya dari Column
+/// Halaman formulir untuk menambah proyek (Tutorial 9).
 class ProjectFormPage extends StatefulWidget {
   const ProjectFormPage({super.key});
 

@@ -2,7 +2,9 @@
 
 Aplikasi mobile portofolio pribadi berbasis Flutter (Pemrograman Berbasis Platform).
 Halaman utama menampilkan identitas pemilik (NPM, Nama, Kelas) dan menu aksi
-(Lihat Proyek, Tambah Proyek, Logout) yang menampilkan SnackBar saat ditekan.
+(Lihat Proyek, Tambah Proyek, Tambah Edukasi, Logout) yang menampilkan SnackBar saat ditekan.
+Kartu Tambah Proyek dan Tambah Edukasi, serta drawer, membuka formulir dengan validasi
+dan dialog ringkasan.
 
 ## Setup
 
@@ -57,7 +59,7 @@ ingin mereset state dari sistem kita karena hot reload tetap menyimpan state seb
 
 1. Perbedaan ketiganya ada di cara mereka mengatur tumpukan halaman. Push menaruh halaman baru di atas halaman yang sedang tampil, jadi halaman lama masih ada di bawahnya. Push replacement mengganti halaman yang sedang tampil dengan yang baru, jadi tidak ada halaman lama untuk kembali. Pop membuang halaman paling atas sehingga kita balik ke halaman di bawahnya. Untuk membuka formulir dari kartu aksi saya pakai push, supaya tombol kembali bawaan tetap bisa dipakai. Opsi Home di drawer memakai push replacement ke halaman utama, jadi halaman formulir diganti dengan halaman utama.
 
-2. Semua halaman memakai kerangka yang sama: Scaffold sebagai wadah, AppBar di atas, dan Drawer di samping. Jadi pengguna selalu menemukan menu di tempat yang sama dan tampilannya terasa satu aplikasi. Contoh warna tema: warna utama tema (ungu) dipakai di AppBar halaman utama dan AppBar halaman formulir edukasi, juga di tombol Simpan.
+2. Semua halaman memakai kerangka yang sama: Scaffold sebagai wadah, AppBar di atas, dan Drawer di samping. Jadi pengguna selalu menemukan menu di tempat yang sama dan tampilannya terasa satu aplikasi. Contoh warna tema: warna utama tema (indigo, dari ColorScheme.fromSeed di main.dart) dipakai di AppBar halaman utama, AppBar halaman formulir edukasi, header drawer, dan tombol Simpan.
 
 3. Formulir saya taruh dalam satu kolom ke bawah karena layar HP sempit, dan itu paling gampang diisi satu per satu. Widget pengatur jarak (padding dan sized box) bikin tiap kolom tidak berdempetan. Widget penggulir dipakai supaya kalau isinya lebih tinggi dari layar, atau tertutup papan ketik, pengguna masih bisa menggulir sampai tombol Simpan.
 

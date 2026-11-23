@@ -35,12 +35,20 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // Expanded membagi lebar baris sama rata sehingga tidak overflow
+              // pada layar ponsel sempit.
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InfoCard(title: 'NPM', content: npm),
-                  InfoCard(title: 'Name', content: nama),
-                  InfoCard(title: 'Class', content: kelas),
+                  Expanded(
+                    child: InfoCard(title: 'NPM', content: npm),
+                  ),
+                  Expanded(
+                    child: InfoCard(title: 'Name', content: nama),
+                  ),
+                  Expanded(
+                    child: InfoCard(title: 'Class', content: kelas),
+                  ),
                 ],
               ),
 
@@ -94,13 +102,12 @@ class InfoCard extends StatelessWidget {
     return Card(
       elevation: 0,
       child: Container(
-        width: MediaQuery.of(context).size.width / 3.5,
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8.0),
-            Text(content),
+            Text(content, textAlign: TextAlign.center),
           ],
         ),
       ),
